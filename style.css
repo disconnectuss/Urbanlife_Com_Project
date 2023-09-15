@@ -1,0 +1,400 @@
+@import "MediaScreen.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Trirong", serif;
+
+}
+
+:root {
+    --main-color: rgb(242, 239, 244);
+    --main-font-color: rgb(3, 48, 52);
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--main-color);
+}
+
+section {
+    height: 80%;
+}
+
+header {
+    z-index: 1;
+    background-color: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 5px;
+}
+
+.title h1 {
+    font-size: 40px;
+    color: rgb(2, 60, 60);
+}
+
+.title h1:hover {
+    font-size: 50px;
+}
+
+.icons {
+    margin-right: 10px;
+    font-size: xx-large;
+    color: rgb(1, 33, 31);
+}
+
+.icons:hover {
+    font-size: 40px;
+}
+
+.menu {
+    background-color: var(--main-color);
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+
+}
+
+.menu ul li {
+    list-style: none;
+    text-transform: capitalize;
+    border-radius: 10px;
+    padding: 3px;
+    color: rgb(45, 128, 139);
+
+}
+
+.menu ul li a {
+    color: var(--main-font-color);
+    font-size: 20px;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+.menu ul li a:hover {
+    transition: ease 0.5s;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+.menu ul li a.active{
+    background-color: aquamarine;
+}
+
+/* section-1 home  */
+
+.home {
+    z-index: -1;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(urban-life-img/home4.jpeg);
+    background-position:center;
+    background-size: cover;
+    position: relative;
+}
+
+/* section 2 about */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    height: 50vh;
+
+}
+
+.img-right {
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 50px;
+}
+
+.img-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transform: rotate(10deg);
+    border: dashed;
+    box-shadow: 15px 15px 15px gray;
+}
+
+.img-right img:hover {
+    box-shadow: 30px 30px 30px rgb(2, 92, 83);
+
+}
+
+.text-left {
+    max-width: 300px;
+    max-height: 300px;
+    margin-left: 50px;
+}
+.about-text h1 {
+    font-size: 30px;
+    text-transform: capitalize;
+    color: cadetblue;
+    text-shadow: 2px 2px 2px black;
+}
+
+.about-text p {
+    font-size: 17px;
+}
+
+.button1 {
+    margin: 50px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(45, 128, 139);
+    width: 100px;
+    border-color: blanchedalmond;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.button1:hover {
+    background-color: gray;
+    transition: 0.5s ease;
+    width: 130px;
+}
+
+/* section 3 Activities */
+.activities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.heading-act {
+    text-align: center;
+    font-size: 50px;
+    color: cadetblue;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+#cards {
+    width: 200px;
+    min-height: 200px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#cards div img {
+    width: 100%;
+    height: 280px;
+    padding: 5px;
+    border-radius: 20px;
+    margin-right: 20px;
+
+}
+
+#cards div img:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+#cards div a {
+    font-size: 20px;
+    color: var(--main-font-color);
+    padding: 10px;
+
+}
+
+/* section 4-photos slider */
+/* Slideshow container */
+.gallery-slider {
+    margin:20px;
+    height: 50;
+}
+.slideshow-container {
+    max-width: 50px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    align-items: center;
+    height: 100vh;
+  }
+  .mySlides img{
+    height: 100% !important;
+    width: 100% !important;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+
+/* section-5 blogs */
+.blog {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    margin-top: 200px;
+    margin: 50px;
+}
+
+.heading-blogs {
+    font-size: 100px;
+    color: cadetblue;
+    margin-top: 100px;
+}
+
+.blog-card {
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.blog-h5 {
+    font-size: 20px;
+    margin: 5px;
+    border-bottom: 1px solid;
+    color: cadetblue;
+}
+
+.blog-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.name {
+    font-size: 20px;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.blog-p {
+    font-size: 15;
+    opacity: 0.8;
+}
+
+/* footer section */
+.contact {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid cadetblue;
+    padding: 30px;
+    margin: 50px;
+    color: cadetblue;
+    gap: 10px;
+}
+
+.contact-title {
+    font-size: 40px;
+}
+
+.social-media-icons i {
+    padding: 10px;
+    justify-content: space-between;
+
+}
+
+.social-media-icons i:hover {
+    box-shadow: 5px 5px 5px gainsboro;
+    width: 50px;
+}
+
+.contact h4,
+p {
+    line-height: 25px;
+}
+
+.contact
+/* gonna edit gallery section using bootstrap, bye for now!! */
